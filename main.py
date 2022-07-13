@@ -37,8 +37,7 @@ class Main:
     def Jogo(self):
         num_tentativa = 0
         while num_tentativa < 7:
-                    m = Main()
-                    print(Main.Palavra_chave)
+                    m = Main()       
                     m.Input()
                     m.Verificar_pos_correta()
                     if Main.win_game == Main.Palavra_chave:
