@@ -18,18 +18,21 @@ class Main:
 
 
     def Verificar_pos_correta(self):
+        char_palavra_chave = list(Main.Palavra_chave)
+        char_Input = list(self.input)
         for letra in self.input:
             lis_count = Main.Palavra_chave.count(letra)
             if lis_count >= 1 :
-                index_Lista = Main.Palavra_chave.index(letra)
-                index_Input = self.input.index(letra)
-                if index_Lista == index_Input:
-                    print("\033[32m{}".format(letra)) #Verde
-                    Main.win_game = self.input
+                if char_Input[0] == char_palavra_chave[0]:
+                    print("\033[32m{}".format(letra))  # Verde
                 else:
-                    print("\033[33m{}".format(letra)) #Amarelo
+                    print("\033[33m{}".format(letra))  # Amarelo
+                char_Input.pop(0)
+                char_palavra_chave.pop(0)
             if lis_count == 0:
-                print("\033[31m{}".format(letra))
+                print("\033[31m{}".format(letra)) # Vermelho
+                char_Input.pop(0)
+                char_palavra_chave.pop(0)
 
 
 
