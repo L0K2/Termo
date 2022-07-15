@@ -1,4 +1,6 @@
 import Gerar_palavra as gp
+import os
+from os import system
 
 class Main:
 
@@ -10,8 +12,8 @@ class Main:
     def __init__(self):
         mds = gp.Gerar_palavra()
         mds.PegarPalavras()
-        #self.Palavra = mds.RetornarValor()
         self.input = ""
+        os.system('color')
 
     def Input(self):
         self.input = input("\033[34m{}".format("Digite uma palavra: "))
