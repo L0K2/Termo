@@ -13,6 +13,7 @@ class Gerar_palavra:
                 Gerar_palavra.lista.append(line)
 
     def RetornarValor(self):
-        s = random.randint(0,3)
-        palavra_chave = Gerar_palavra.lista[s]
-        return palavra_chave
+       n = len(Gerar_palavra.lista) - 1
+       s = random.randint(0,n)
+       palavra_chave = Gerar_palavra.lista[s]
+       return palavra_chave
