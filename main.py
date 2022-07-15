@@ -1,6 +1,8 @@
 import Gerar_palavra as gp
 import os
 from os import system
+import time
+from time import sleep
 
 class Main:
 
@@ -48,6 +50,7 @@ class Main:
                     m.Verificar_pos_correta()
                     if Main.win_game == Main.Palavra_chave:
                         print("Você Ganhou!")
+                        sleep(5)
                         break
                     num_tentativa = num_tentativa + 1
         if num_tentativa == 7:
