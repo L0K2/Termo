@@ -25,6 +25,7 @@ class Main:
             if lis_count >= 1 :
                 if char_Input[0] == char_palavra_chave[0]:
                     print("\033[32m{}".format(letra))  # Verde
+                    Main.win_game = self.input
                 else:
                     print("\033[33m{}".format(letra))  # Amarelo
                 char_Input.pop(0)
