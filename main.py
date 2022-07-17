@@ -55,6 +55,8 @@ class Main:
                     num_tentativa = num_tentativa + 1
         if num_tentativa == 7:
             print("Você perdeu!")
+            print("A palavra era: ",Main.Palavra_chave)
+            sleep(5)
 
 
 
